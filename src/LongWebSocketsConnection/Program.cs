@@ -6,12 +6,12 @@ using System.Threading.Tasks;
 
 namespace LongWebSocketsConnection
 {
-    class Program
-    {
-        static void Main(string[] args)
-        {
+	class Program
+	{
+		static void Main(string[] args)
+		{
 			Run().Wait();
-        }
+		}
 
 		static async Task Run()
 		{
@@ -23,8 +23,8 @@ namespace LongWebSocketsConnection
 			while (true)
 			{
 				Thread.Sleep(1000);
-				await connection.WriteData($"{stopwatch.ElapsedMilliseconds/1000.0:N1}");
+				await connection.WriteData($"{stopwatch.ElapsedMilliseconds / 1000.0:N1}");
 			}
 		}
-    }
+	}
 }
